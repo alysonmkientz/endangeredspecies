@@ -1,72 +1,29 @@
 * {
-    background-color: #edfeff;
+    box-sizing: border-box;
   }
   
-  header {
-    position: fixed;
-    display: block;
-    /* width: 90%; */
-    top: 0;
-    left: 10px;
-    right: 10px;
-    height: 85px;
-  }
-  
-  .header {
-    background-color: #bcedee;
-    text-align: center;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    margin: 10px;
-  }
-  
-  main {
-    margin-top: 120px;
-    margin-bottom: 200px;
-  }
-  
-  .results {
-    list-style-type: none;
-  }
-  
-  .results li {
-    display: inline-block;
-    max-width: 1000px;
+  .row {
+    /* max-width: 1000px; */
     padding-left: 20px;
     padding-right: 20px;
-    margin: auto;
+    margin: 0 auto;
   }
   
-  .result-li img {
-    display: block;
-    width: 200px;
-    height: 200px;
-    padding-left: 25px;
-    padding-right: 25px;
+  .row::before,
+  .row::after {
+    display: table;
+    content: '';
   }
   
-  .wrongimage {
-    color: red;
+  .row::after {
+    clear: both;
   }
   
-  .footer {
-    background-color: #bcedee;
-    margin-top: 10px;
-    margin-bottom: 0px;
+  .col-3 {
+    float: left;
   }
   
-  footer {
-    position: fixed;
-    bottom: 0;
-    left: 10px;
-    right: 10px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    text-align: center;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-  }
-  
-  .countryButton {
-    background-color: #bcedee;
-  }
+  @media only screen and (min-width: 640px) {
+    .col-3 {
+      width: 25%;
+    }
